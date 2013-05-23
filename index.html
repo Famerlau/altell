@@ -1,0 +1,448 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&subset=latin,cyrillic,latin-ext' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/jquery.galleryview-3.0-dev.css">
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+	<script type="text/javascript" src="js/jquery.bxSlider.min.js"></script>
+	<script type="text/javascript" src="js/jquery.galleryview-3.0-dev.js"></script>
+	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="js/jquery.timers-1.2.js"></script>
+	<script type="text/javascript" src="js/sc.js"></script>
+</head>
+<body>
+<a id="go_top" href="#"></a>
+<div id="wrapper">
+		<div id="header">
+			<div class="header_top">
+				<div class="header_top__social col001 column">
+					<ul class="header_top__social__items">
+						<li class="header_top__social__item01"><a href="/" target="_blank"></a></li>
+						<li class="header_top__social__item02"><a href="/" target="_blank"></a></li>
+						<li class="header_top__social__item03"><a href="/" target="_blank"></a></li>
+						<li class="header_top__social__item04"><a href="/" target="_blank"></a></li>
+						<li class="header_top__social__item05"><a href="/" target="_blank"></a></li>
+					</ul>
+				</div>
+				<div class="header_top__search col002 column">
+					<p><input type="search"></p>
+				</div>
+				<div class="header_top__topMenu col003 column">
+					<ul class="header_top__topMenu__items">
+						<li class="header_top__topMenu_item01"><a href="/" class="solidButton" target="_blank">Карта сайта</a></li>
+						<li class="header_top__topMenu_item02"><a href="/" class="solidButton" target="_blank">Контакты</a></li>
+						<li class="header_top__topMenu_item03">
+							<p class="header_top__topMenu_item03_flag_title">Eng</p>
+							<ul class="header_top__topMenu_item03_flag_items">
+								<li class="header_top__topMenu_item03_flag_item01"><a href="/"><img src="css/el_it/fl_eng.png" alt=""></a></li>
+								<li class="header_top__topMenu_item03_flag_item02"><a href="/"><img src="css/el_it/fl_rus.png" alt=""></a></li>
+								<li class="header_top__topMenu_item03_flag_item03"><a href="/"><img src="css/el_it/fl_fr.png" alt=""></a></li>
+								<li class="header_top__topMenu_item03_flag_item04"><a href="/"><img src="css/el_it/fl_ger.png" alt=""></a></li>
+							</ul>
+							<i class="header_top__topMenu_item03_flag_arrow"></i>
+						</li>
+					</ul>
+					<div class="clear"></div>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="header_mid">
+				<div class="header_mid__logo col011 column">
+					<a href="/"><img src="css/el_it/head_logo.png" alt=""></a>
+				</div>
+				<div class="header_mid__partButton col012 column">
+					<a href="/" class="greenButton"><i></i>Партнерский раздел</a>
+				</div>
+				<div class="header_mid__callButton col013 column">
+					<a href="/" class="dottedButton">Позвоните мне</a>
+				</div>
+				<div class="header_mid__phones col014 column">
+					<div class="header_mid__phones block001">
+						<p><span>Санкт-Петербург</span></p>
+						<p>7 812 309-05-88 </p>
+					</div>
+					<div class="header_mid__phones block002">
+						<p><span>Москва</span></p>
+						<p>7 495 664-22-40 </p>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="header_bott">
+				<div class="header_bott__mainMenu col021 column">
+					<ul class="header_bott__mainMenu__items">
+						<li class="header_bott__mainMenu__item01"><a href="/">О нас</a></li>
+						<li class="header_bott__mainMenu__item02"><a href="/">Продукты</a></li>
+						<li class="header_bott__mainMenu__item03"><a href="/">Решения</a></li>
+						<li class="header_bott__mainMenu__item04"><a href="/">Поддержка</a></li>
+						<li class="header_bott__mainMenu__item05"><a href="/">Клиенты</a></li>
+						<li class="header_bott__mainMenu__item06"><a href="/">Партнеры</a></li>
+						<li class="header_bott__mainMenu__item07"><a href="/">Законодательство</a></li>
+					</ul>
+				</div>
+				<div class="header_bott__testButton col022 column">
+					<a href="/" class="greenButton"><i></i>Тест и покупка</a>
+			    </div>
+			    <div class="clear"></div>
+			</div>
+		</div>
+		<!--    ** HEADER END **    -->
+		<div id="content">
+			<div class="content__indexPage__wrapper">
+				<div class="content__indexPage__block01_gall">
+					<ul id="MainGallery">
+                        <li><img src="http://media.blizzard.com/sc2/media/fanart/fanart-0210-large.jpg"></li>
+                        <li><img src="http://media.blizzard.com/sc2/media/fanart/fanart-0209-large.jpg"></li>
+                        <li><img src="http://media.blizzard.com/sc2/media/fanart/fanart-0208-large.jpg"></li>
+                        <li><img src="http://media.blizzard.com/sc2/media/fanart/fanart-0188-large.jpg"></li>
+                        <li><img src="http://media.blizzard.com/sc2/media/fanart/fanart-0181-large.jpg"></li>
+                    </ul>
+				</div>
+				<div class="content__indexPage__block02 over">
+					<div class="content__indexPage__block02__items col071 column">
+						<h3 class="content__indexPage__block02__title">О нас</h3>
+						<p>ALTELL — одна из ведущих российских компаний, работающих в области информационной безопасности. Нашей специализацией является выполнение сложных разработок в области аппаратного и программного обеспечения, в том числе продуктов специального назначения. Качество продукции подтверждается международной системой менеджмента качества и контролируется военным представительством в соответствии с ГОСТ РВ 15.307-2002. Деятельность компании лицензирована ФСТЭК и ФСБ РФ.</p>
+						<ul class="content__indexPage__block02__col071__items over">
+							<li class="content__indexPage__block02__col071__item01">
+								<a href=""><img src="css/el_it/ab_prod.gif" alt=""></a>
+								<p><a href="">Продукты</a></p>
+							</li>
+							<li class="content__indexPage__block02__col071__item02">
+								<a href=""><img src="css/el_it/ab_lic.gif" alt=""></a>
+								<p><a href="">Лицензии</a></p>
+							</li>
+							<li class="content__indexPage__block02__col071__item03">
+								<a href=""><img src="css/el_it/ab_cont.gif" alt=""></a>
+								<p><a href="">Контакты</a></p>
+							</li>
+						</ul>
+					</div>
+					<div class="content__indexPage__block02__items col072 column">
+						<div class="content__indexPage__block02__col072" id="tabs001">
+							<ul class="content__indexPage__block02__col072">
+								<li class="content__indexPage__block02__col072_title">
+									<h3><a href="#tabs001-01" class="dottedButton">Новости</a><i class="news_rss"></i></h3>
+								</li>
+								<li class="content__indexPage__block02__col072_title">
+									<h3><a href="#tabs001-02" class="dottedButton">Подписаться</a></h3>
+								</li>
+								<div class="clear"></div>
+								<div id="tabs001-01" class="content__indexPage__block02__col072_item01">
+									<div class="content__indexPage__block02__col072_item01__newsList">
+										<div class="content__indexPage__newsList_item01 over">
+											<div class="content__indexPage__newsList_date col081 column">
+												<p>12.03.2012</p>
+											</div>
+											<div class="content__indexPage__newsList_link col082 column">
+												<p><a href="/">Компания «АльтЭль» приняла участие в ИНФОФОРУМЕ 2013</a></p>
+											</div>
+										</div>
+										<div class="content__indexPage__newsList_item02 over">
+											<div class="content__indexPage__newsList_date col081 column">
+												<p>12.03.2012</p>
+											</div>
+											<div class="content__indexPage__newsList_link col082 column">
+												<p><a href="/">Компания «АльтЭль» приняла участие в ИНФОФОРУМЕ 2013</a></p>
+											</div>
+										</div>
+										<div class="content__indexPage__newsList_item03 over">
+											<div class="content__indexPage__newsList_date col081 column">
+												<p>12.03.2012</p>
+											</div>
+											<div class="content__indexPage__newsList_link col082 column">
+												<p><a href="/">Компания «АльтЭль» приняла участие в ИНФОФОРУМЕ 2013</a></p>
+											</div>
+										</div>
+										<div class="content__indexPage__newsList_item03 over">
+											<div class="content__indexPage__newsList_date col081 column">
+												<p>12.03.2012</p>
+											</div>
+											<div class="content__indexPage__newsList_link col082 column">
+												<p><a href="/">Компания «АльтЭль» приняла участие в ИНФОФОРУМЕ 2013</a></p>
+											</div>
+										</div>
+										<div class="content__indexPage__newsList_item03 over">
+											<div class="content__indexPage__newsList_date col081 column">
+												<p>12.03.2012</p>
+											</div>
+											<div class="content__indexPage__newsList_link col082 column">
+												<p><a href="/">Компания «АльтЭль» приняла участие в ИНФОФОРУМЕ 2013</a></p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div id="tabs001-02" class="content__indexPage__block02__col072_item02">
+									<p><input type="text" value="Введите ваш адрес электронной почты"  onfocus="this.value=''"></p>
+									<p>Опциональный текстоый блок. Инфа про то, что контактная информация не передаётся третьим лицам, компания «АльтЭль» не занимается рассылкой спама и т.д.</p>
+									<input type="submit" value="Подписаться" class="greenButton">
+								</div>
+							</ul>
+						</div>
+					</div>
+					<div class="content__indexPage__block02__items col073 column">
+						<h3 class="content__indexPage__block02__title">Мероприятия и акции</h3>
+						<div class="content__indexPage__block02__col073_wrapper">
+							<div id="slider001">
+							    <div class="content__indexPage__block02__col073_inner">
+							        <p class="content__indexPage__block02__col073_title"><a href="">Первый Партнерский форум ALTELL</a></p>
+							        <p>12-13 августа 2013 Санкт-Петербург, крейсер Аврора</p>
+							        <p>Первая встреча участников партнерской сети компании ALTELL. Море веселья, мудрые советы разработчиков и революционный выстрел по российскому рынку информационной безопасности! Первая встреча участников партнерской сети компании ALTELL.</p>
+							        <p class="content__indexPage__block02__col073_learn"><a href="">Узнать больше</a></p>
+							    </div>
+							    <div class="content__indexPage__block02__col073_inner">
+							        <p class="content__indexPage__block02__col073_title"><a href="">Первый Партнерский форум ALTELL</a></p>
+							        <p>12-13 августа 2013 Санкт-Петербург, крейсер Аврора</p>
+							        <p>Первая встреча участников партнерской сети компании ALTELL. Море веселья, мудрые советы разработчиков и революционный выстрел по российскому рынку информационной безопасности! Первая встреча участников партнерской сети компании ALTELL.</p>
+							        <p class="content__indexPage__block02__col073_learn"><a href="">Узнать больше</a></p>
+							    </div>
+							    <div class="content__indexPage__block02__col073_inner">
+							        <p class="content__indexPage__block02__col073_title"><a href="">Первый Партнерский форум ALTELL</a></p>
+							        <p>12-13 августа 2013 Санкт-Петербург, крейсер Аврора</p>
+							        <p>Первая встреча участников партнерской сети компании ALTELL. Море веселья, мудрые советы разработчиков и революционный выстрел по российскому рынку информационной безопасности! Первая встреча участников партнерской сети компании ALTELL.</p>
+							        <p class="content__indexPage__block02__col073_learn"><a href="">Узнать больше</a></p>
+							    </div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<hr>
+				<div class="content__indexPage__block03">
+					<h3 class="content__indexPage__block03__title">Наши решения используют</h3>
+					<p class="content__indexPage__block03_learn"><a href="">Смотреть всех</a></p>
+					<div class="clear"></div>
+					<div class="content__indexPage__block03_wrapper">
+						<ul id="slider002" class="content__indexPage__block03_items">
+							<li class="content__indexPage__block03_item001 tooltips">
+								<a href="" class="content_indexPage__block03__link"><img src="css/el_it/pt1.jpg"></a>
+								<div class="tooltips__popup">
+									<div class="tooltips__wrapper">
+										<div class="tootips__inner">
+									        <p class="tooltips__name">Название компании</p>
+									        <p class="tooltips__link"><a href="">История успеха</a></p>
+									        <i class="close"></i>
+									    </div>
+									</div>
+								</div>
+							</li>
+							<li class="content__indexPage__block03_item002 tooltips">
+								<a href="" class="content_indexPage__block03__link"><img src="css/el_it/pt2.jpg"></a>
+								<div class="tooltips__popup">
+									<div class="tooltips__wrapper">
+										<div class="tootips__inner">
+									        <p class="tooltips__name">Название компании</p>
+									        <p class="tooltips__link"><a href="">История успеха</a></p>
+									        <i class="close"></i>
+									    </div>
+									</div>
+								</div>
+							</li>
+							<li class="content__indexPage__block03_item003 tooltips">
+								<a href="" class="content_indexPage__block03__link"><img src="css/el_it/pt3.jpg"></a>
+								<div class="tooltips__popup">
+									<div class="tooltips__wrapper">
+										<div class="tootips__inner">
+									        <p class="tooltips__name">Название компании</p>
+									        <p class="tooltips__link"><a href="">История успеха</a></p>
+									        <i class="close"></i>
+									    </div>
+									</div>
+								</div>
+							</li>
+							<li class="content__indexPage__block03_item004 tooltips">
+								<a href="" class="content_indexPage__block03__link"><img src="css/el_it/pt4.jpg"></a>
+								<div class="tooltips__popup">
+									<div class="tooltips__wrapper">
+										<div class="tootips__inner">
+									        <p class="tooltips__name">Название компании</p>
+									        <p class="tooltips__link"><a href="">История успеха</a></p>
+									        <i class="close"></i>
+									    </div>
+									</div>
+								</div>
+							</li>
+							<li class="content__indexPage__block03_item005 tooltips">
+								<a href="" class="content_indexPage__block03__link"><img src="css/el_it/pt5.jpg"></a>
+								<div class="tooltips__popup">
+									<div class="tooltips__wrapper">
+										<div class="tootips__inner">
+									        <p class="tooltips__name">Название компании</p>
+									        <p class="tooltips__link"><a href="">История успеха</a></p>
+									        <i class="close"></i>
+									    </div>
+									</div>
+								</div>
+							</li>
+							<li class="content__indexPage__block03_item006 tooltips">
+								<a href="" class="content_indexPage__block03__link"><img src="css/el_it/pt6.jpg"></a>
+								<div class="tooltips__popup">
+									<div class="tooltips__wrapper">
+										<div class="tootips__inner">
+									        <p class="tooltips__name">Название компании</p>
+									        <p class="tooltips__link"><a href="">История успеха</a></p>
+									        <i class="close"></i>
+									    </div>
+									</div>
+								</div>
+							</li>
+							<li class="content__indexPage__block03_item007 tooltips">
+								<a href="" class="content_indexPage__block03__link"><img src="css/el_it/pt7.jpg"></a>
+								<div class="tooltips__popup">
+									<div class="tooltips__wrapper">
+										<div class="tootips__inner">
+									        <p class="tooltips__name">Название компании</p>
+									        <p class="tooltips__link"><a href="">История успеха</a></p>
+									        <i class="close"></i>
+									    </div>
+									</div>
+								</div>
+							</li>
+							<li class="content__indexPage__block03_item008 tooltips">
+								<a href="" class="content_indexPage__block03__link"><img src="css/el_it/pt8.jpg"></a>
+								<div class="tooltips__popup">
+									<div class="tooltips__wrapper">
+										<div class="tootips__inner">
+									        <p class="tooltips__name">Название компании</p>
+									        <p class="tooltips__link"><a href="">История успеха</a></p>
+									        <i class="close"></i>
+									    </div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="content__indexPage__block04">
+					<div class="content__indexPage__block04_item col191 column">
+						<div class="content__indexPage__block04_textBlock_img">
+						    <img src="css/el_it/ger1.jpg" alt="" />
+						</div>
+						<div class="content__indexPage__block04_textBlock">
+							<p class="content__indexPage__block04_textBlock__inner"><i>«В процесс эксплуатации оборудование компании «АльтЭль» зарекомендовала себя с лучшей стороны. По своим функциональным характеристикам комплексы ALTELL NEO не уступают, а по некоторым характеристикам и превосходят аналогичные продукты отечественных и зарубежных компаний».</i></p>
+							<p class="content__indexPage__block04_textBlock__since1"><strong>— М. Курчавый</strong></p>
+							<p class="content__indexPage__block04_textBlock__since2">руководитель Управления ФСТЭК России по Северо-Западному федеральному округу</p>
+						</div>
+					</div>
+					<div class="content__indexPage__block04_item col192 column">
+						<div class="content__indexPage__block04_textBlock_img">
+						    <img src="css/el_it/ger2.jpg" alt="" />
+						</div>
+						<div class="content__indexPage__block04_textBlock">
+							<p class="content__indexPage__block04_textBlock__inner"><i>«В процессе эксплуатации межсетевой экран зарекомендовал себя с наилучшей стороны как надежное и качественное оборудование. По своим функциональным характеристикам комплексы ALTELL NEO превосходят аналогичные продукты».</i></p>
+							<p class="content__indexPage__block04_textBlock__since1"><strong>— Д. Русаков</strong></p>
+							<p class="content__indexPage__block04_textBlock__since2">начальник ИТС таможниФедеральная таможенная служба, Выборгская таможня</p>
+						</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+		</div>
+		<!--    ** FOOTER START **    -->
+		<div id="footer">
+			<div class="footer_hide__wrapper">
+				<a href="#" class="footer_hide__button"></a>
+				<div class="footer_hide__menus">
+					<div class="footer_hide__menu col031 column">
+						<p class="footer_hide__menus__items__title">Продукты</p>
+						<ul class="footer_hide__menus__items">
+							<li class="footer_hide__menus__item01"><a href="/">ALTELL NEO</a></li>
+							<li class="footer_hide__menus__item02"><a href="/">ALTELL TRUST</a></li>
+							<li class="footer_hide__menus__item03"><a href="/">ALTELL seOS VT</a></li>
+							<li class="footer_hide__menus__item04"><a href="/">ALTELL vFORT</a></li>
+							<li class="footer_hide__menus__item05"><a href="/">ALTELL FORT</a></li>
+						</ul>
+					</div>
+					<div class="footer_hide__menu col032 column">
+						<p class="footer_hide__menus__items__title">Решения</p>
+						<div class="footer_hide__menus__col032 col041 column">
+							<p class="footer_hide__menus__col032_title">По отраслям</p>
+							<ul class="footer_hide__menus__col032__items">
+								<li class="footer_hide__menus__col032__item01"><a href="/">Финансовый сектор</a></li>
+								<li class="footer_hide__menus__col032__item02"><a href="/">Государственные органы</a></li>
+								<li class="footer_hide__menus__col032__item03"><a href="/">Здравоохранение</a></li>
+								<li class="footer_hide__menus__col032__item04"><a href="/">Образование</a></li>
+								<li class="footer_hide__menus__col032__item05"><a href="/">Телекоммуникации</a></li>
+								<li class="footer_hide__menus__col032__item06"><a href="/">Торговля</a></li>
+								<li class="footer_hide__menus__col032__item07"><a href="/">Производство</a></li>
+								<li class="footer_hide__menus__col032__item08"><a href="/">Логистика</a></li>
+							</ul>
+						</div>
+						<div class="footer_hide__menus__col032 col042 column">
+							<p class="footer_hide__menus__col032_title">По типу клиентов</p>
+							<ul class="footer_hide__menus__col032__items">
+								<li class="footer_hide__menus__col032__item01"><a href="/">Средний и малый бизнес</a></li>
+								<li class="footer_hide__menus__col032__item02"><a href="/">Крупные инвестиционные холдинги</a></li>
+								<li class="footer_hide__menus__col032__item03"><a href="/">Силовые структуры</a></li>
+								<li class="footer_hide__menus__col032__item04"><a href="/">Бюджетные организации</a></li>
+							</ul>
+						</div>
+						<div class="footer_hide__menus__col032 col043 column">
+							<p class="footer_hide__menus__col032_title">По технологии</p>
+							<ul class="footer_hide__menus__col032__items">
+								<li class="footer_hide__menus__col032__item01"><a href="/">Firewall</a></li>
+								<li class="footer_hide__menus__col032__item02"><a href="/">UTM</a></li>
+								<li class="footer_hide__menus__col032__item03"><a href="/">VPN</a></li>
+								<li class="footer_hide__menus__col032__item04"><a href="/">BIOS</a></li>
+								<li class="footer_hide__menus__col032__item05"><a href="/">Криптографические алгоритмы</a></li>
+								<li class="footer_hide__menus__col032__item06"><a href="/">Защищенная виртуальная среда</a></li>
+								<li class="footer_hide__menus__col032__item07"><a href="/">Доверенная загрузка BIOS</a></li>
+								<li class="footer_hide__menus__col032__item08"><a href="/">Семейство защищенных ОС seOS</a></li>
+								<li class="footer_hide__menus__col032__item08"><a href="/">Защищенный WiFi</a></li>
+							</ul>
+						</div>
+						<div class="clear"></div>
+					</div>
+					<div class="footer_hide__menu col033 column">
+						<p class="footer_hide__menus__items__title">Поддержка</p>
+						<ul class="footer_hide__menus__items">
+							<li class="footer_hide__menus__item01"><a href="/">Документация и ПО</a></li>
+							<li class="footer_hide__menus__item02"><a href="/">База знаний</a></li>
+							<li class="footer_hide__menus__item03"><a href="/">Портал технической поддержки</a></li>
+							<li class="footer_hide__menus__item04"><a href="/">Обучение и сертификация</a></li>
+							<li class="footer_hide__menus__item05"><a href="/">Активировать продукт или услугу</a></li>
+							<li class="footer_hide__menus__item06"><a href="/">Гарантия и ремонт</a></li>
+							<li class="footer_hide__menus__item07"><a href="/">Контакты службы технической поддержки</a></li>
+						</ul>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="footer_redLine">
+					<div class="footer_redLine_social col051 column">
+						<ul class="footer_redLine_social__items">
+							<li class="footer_redLine_social__item01"><a href="/"></a></li>
+							<li class="footer_redLine_social__item02"><a href="/"></a></li>
+							<li class="footer_redLine_social__item03"><a href="/"></a></li>
+							<li class="footer_redLine_social__item04"><a href="/"></a></li>
+							<li class="footer_redLine_social__item05"><a href="/"></a></li>
+						</ul>
+					</div>
+					<div class="footer_redLine_search col052 column">
+						<p><input type="search"></p>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="footer_botton">
+					<div class="footer_botton__cop col061 column">
+						<p>© «АльтЭль» 2006-2013.</p>
+					</div>
+					<div class="footer_botton__menu col062 column">
+						<ul class="footer_botton__menu__items">
+							<li class="footer_botton__menu__item01"><a href="/">Карта сайта</a></li>
+							<li class="footer_botton__menu__item02"><a href="/">Пресс-центр</a></li>
+							<li class="footer_botton__menu__item03"><a href="/">Вакансии</a></li>
+							<li class="footer_botton__menu__item04"><a href="/">Поддержка</a></li>
+							<li class="footer_botton__menu__item05"><a href="/">Стать партнером</a></li>
+							<li class="footer_botton__menu__item06"><a href="/">Тест и покупка</a></li>
+							<li class="footer_botton__menu__item07"><a href="/">Контакты</a></li>
+						</ul>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+		</div>
+	</div>	
+</body>
+</html>
