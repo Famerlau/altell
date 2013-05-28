@@ -76,3 +76,17 @@ $(function(){
         });
     });
 });
+/* right Menu */
+$(function(){
+    $('.rightMenu__innerMenu').addClass('innerMenu__close');
+    $('.rightMenu__innerMenu').click(function(){
+        if ($(this).hasClass('innerMenu__close')) {
+             $(this).removeClass('innerMenu__close');
+             $(this).addClass('innerMenu__open');
+        }
+        else if ($(this).hasClass('innerMenu__open')) {
+            $(this).removeClass('innerMenu__open');
+            $(this).addClass('innerMenu__close');
+        }
+     });
+});
