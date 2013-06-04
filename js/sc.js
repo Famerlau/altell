@@ -90,3 +90,22 @@ $(function(){
         }
      });
 });
+/* image position */
+$(function(){
+    var img = $('.content__innerPage__content img');
+    $(img).each(function(){
+    var align = $(this).attr("align");
+    if (align == "left") {
+       $(this).addClass("image__left");
+    }
+    else if (align == "right") {
+       $(this).addClass("image__right");
+    }
+    });
+});
+/* accordion vacanse */
+$(function() {
+    $("#acc_vacanse").accordion({
+      collapsible: true
+    });
+  });
