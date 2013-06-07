@@ -67,7 +67,9 @@ hr.invise {
 }
 input[type="search"],
 input[type="text"],
-input[type="submit"] {
+input[type="submit"],
+textarea,
+select {
     outline: none;
 }
 .dottedButton {
@@ -935,6 +937,13 @@ li .rightMenu__select {
     width: 90px;
     left: 437px;
 }
+.content__innerPage__itemList011 {
+    width: 440px;
+}
+.content__innerPage__itemList012 {
+    width: 190px;
+    left: 480px;
+}
 .itemList__date,
 .itemList__name,
 .itemList__from {
@@ -959,6 +968,30 @@ li .rightMenu__select {
 }
 .itemList__linkMore:hover {
     text-decoration: none;
+}
+.content__innerPage__redBox {
+    background: #c6212c;
+    padding: 30px 20px 15px;
+    color: #fff;
+}
+.content__innerPage__redBox span {
+    font-size: 18px;
+}
+.greenButtonSet {
+    margin: 15px 0 35px;
+}
+.greenButtonSet .greenButton {
+    border-bottom: none;
+    border-right: none;
+    font-size: 21px;
+    color: #fff;
+    border-radius: 6px;
+    padding: 1px 27px;
+    margin-top: 10px;
+    margin-right: 5px;
+}
+.greenButtonSet .greenButton:last-child {
+    margin-right: 0;
 }
 .itemList__recomm,
 .itemList__recomm__since p {
@@ -1051,6 +1084,223 @@ td.modelPDF {
     width: 100%;
     text-align: center;
     margin-top: 5px;
+}
+/* Forms */
+.form {
+    table-layout: auto;
+}
+.form.formShort {
+    width: 450px;
+}
+.form td {
+    vertical-align: middle;
+    font-size: 14px;
+    padding: 12px 10px 12px 0px;
+}
+.form td:first-child {
+    padding-right: 0px;
+}
+.form td:last-child {
+    padding-right: 0px;
+}
+.form p {
+    margin-bottom: 0px !important;
+}
+.formTitle {
+    padding-bottom: 25px !important;
+}
+.formTitle strong {
+    font-size: 18px;
+}
+.form select,
+.form input[type="text"],
+.form textarea {
+    border: none;
+    border-top: 1px solid #bdbdbd;
+    -webkit-box-shadow: inset 0px 1px 1px rgba(226,226,227,1);
+    -moz-box-shadow: inset 0px 1px 1px rgba(226,226,227,1);
+    box-shadow: inset 0px 1px 1px rgba(226,226,227,1);
+    background: #f4f4f5;
+    height: 26px;
+    width: 100%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 2px 10px;
+    border-radius: 5px;
+}
+input[type="text"],
+textarea {
+     width: 100%; 
+     box-sizing: border-box;
+     -webkit-box-sizing:border-box;
+     -moz-box-sizing: border-box;
+}
+textarea {
+    height: 200px !important;
+    vertical-align: top !important;
+    padding: 10px 10px !important;
+}
+.textareaTd {
+    vertical-align: top !important;
+}
+.form select {
+    background: url(el_it/select-arrow.gif) no-repeat 99% 50% #f4f4f5;
+}
+.form input[type="checkbox"] {
+    display: none;
+}
+.form input[type="checkbox"],
+.form .checkboxLabel {
+    cursor: pointer;
+    font-weight: bold;
+    vertical-align: top;
+    line-height: 140%;
+}
+.form .checkboxTd {
+    padding-bottom: 0px !important;
+    padding-top: 18px !important;
+}
+.form .checkboxLabel i {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+    background: url(el_it/ch_box_off.gif);
+}
+.form input[type="checkbox"]:checked+label i {
+    background: url(el_it/ch_box_on.gif);
+}
+.form .toggleInfo {
+    background: url(el_it/toggle-info.gif);
+    width: 30px;
+    height: 26px;
+    position: relative;
+}
+.form .toggleInfo:hover .toggleInfoTextWrapper {
+    display: block;
+}
+.form .toggleInfoTextWrapper {
+    position: absolute;
+    display: none;
+    background: url(el_it/toggleinfo_arrow.png) no-repeat 0px 10px;
+    right: -151px;
+    top: -11px;
+    width: 150px;
+    z-index: 499;
+}
+.form .toggleInfoText {
+    margin-left: 14px;
+    background-color: #e8eaec;
+    padding: 10px 20px;
+}
+.formConfig__col1,
+.formStandart__col1 {
+    width: 150px;
+}
+.formConfig__col2 {
+    width: 400px;
+}
+.formStandart__col2 {
+    width: 460px !important;
+}
+.formConfig__col3 {
+    width: 80px;
+}
+.formStandart__col3 {
+    width: 30px;
+}
+.formTitle__Checkbox p {
+    margin-bottom: 0 !important;
+}
+.formTitle__Checkbox {
+    padding-bottom: 0 !important;
+}
+.innerPage__cost2 {
+    margin-top: 25px;
+}
+.formStandartAdd .formStandart__col1 {
+    width: 154px;
+}
+.innerPage__cost__total,
+.innerPage__cost__pre_total {
+    font-size: 21px !important;
+    font-weight: bold;
+}
+.innerPage__cost__total2,
+.innerPage__cost__pre_total2 {
+    font-size: 18px !important;
+    font-weight: bold;
+}
+.innerPage__cost .greenButton,
+.innerPage__cost2 .greenButton,
+.formStandartAdd__button {
+    border-bottom: none;
+    border-right: none;
+    font-size: 21px;
+    color: #fff;
+    border-radius: 6px;
+    padding: 1px 31px;
+    margin-top: 10px;
+}
+.formStandartAdd__button {
+    width: 95%;
+}
+.form .content__innerPage__redBox p {
+    margin-bottom: 15px !important;
+}
+.innerPage__cost .addLink,
+.innerPage__cost2 .addLink {
+    display: inline-block;
+    border-bottom: 1px dotted #5facc9;
+    font-size: 18px;
+    margin-top: 25px;
+}
+.innerPage__cost .addLink:hover,
+.innerPage__cost2 .addLink:hover {
+    border-bottom: 1px dotted #fff;
+    text-decoration: none;
+}
+.content__innerPage__firms__inner {
+    margin-top: 35px;
+}
+.content__innerPage__firms01 {
+    width: 220px;
+}
+.content__innerPage__firms02 {
+    width: 282px;
+    left: 240px;
+}
+.content__innerPage__firms03 {
+    width: 120px;
+    left: 560px;
+    font-weight: bold;
+}
+.content__innerPage__firms02 p,
+.content__innerPage__firms03 p {
+    margin-bottom: 0px !important;
+}
+.content__innerPage__firms02 a {
+    color: #000;
+    text-decoration: underline;
+}
+.innerPage__firms03__status {
+    background: url(el_it/firm_stut.gif);
+    display: inline-block;
+    width: 30px;
+    height: 20px;
+    padding-top: 5px;
+    margin-right: 6px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.innerPage__firms03__status:last-child {
+    margin-right: 0px;
+}
+.content__innerPage__firms02 a:hover {
+    text-decoration: none;
+}
+.innerPage__firms_name {
+    font-weight: bold;
 }
 .content__innerPage__pageNave span {
     display: inline-block;
