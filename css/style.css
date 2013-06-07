@@ -1302,7 +1302,15 @@ textarea {
 .innerPage__firms_name {
     font-weight: bold;
 }
-.content__innerPage__pageNave span {
+/*nav page*/
+.content__innerPage__pageNave {
+    width: 100%;
+    text-align: center;
+    margin-top: 5px;
+}
+.content__innerPage__pageNave span.page,
+.content__innerPage__pageNave span.modern-page-first,
+.content__innerPage__pageNave span.modern-page-current{
     display: inline-block;
     width: 23px;
     height: 18px;
@@ -1312,17 +1320,14 @@ textarea {
     text-align: center;
     padding-top: 5px;
 }
-.content__innerPage__vacansItem__list li {
-    background: url(el_it/vacans_list.gif) no-repeat 0px 4px;
-    padding-left: 25px;
-    margin-bottom: 15px;
-}
 .content__innerPage__pageNave span a {
     color: #393939;
     font-weight: bold;
     text-shadow: 1px 1px 1px rgba(255,255,255,.2);
 }
 .content__innerPage__pageNave .pageNave__select,
+.content__innerPage__pageNave span.modern-page-first,
+.content__innerPage__pageNave span.modern-page-current,
 .content__innerPage__pageNave span:hover {
     background-position: 0px -23px;
 }
