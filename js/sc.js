@@ -65,7 +65,14 @@ $(function(){
 $(document).ready(function(){
   $(".footer_hide__button").click(function(e){
     e.preventDefault();
-    $(".footer_hide__menus").slideToggle("slow");
+    $(".footer_hide__menus").slideToggle("slow", function() {
+        if ($(this).css("display") == 'block') {
+            $('.footer_hide__button').addClass('down');
+        }
+        else if ($(this).css("display") == 'none') {
+            $('.footer_hide__button').removeClass('down');
+        }
+    });
   });
 });
 /* go top button */
@@ -106,6 +113,7 @@ $(function(){
 /* accordion vacanse */
 $(function() {
     $("#acc_vacanse").accordion({
-      collapsible: true
+      collapsible: true,
+      heightStyle: "content"
     });
   });

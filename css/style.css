@@ -310,13 +310,26 @@ h2 {
 .header_top__search input[type="search"] {
     height: 26px;
     width: 230px;
+    padding-right: 25px;
     border-radius: 5px;
     -webkit-appearance: none;
     border: none;
     -webkit-box-shadow: inset 0px 1px 1px #c5c5c5;
     -moz-box-shadow: inset 0px 1px 1px #c5c5c5;
     box-shadow: inset 0px 1px 1px #c5c5c5;
-    background: url(el_it/head_search.png) no-repeat 93% 50% #fff;
+}
+.searchWrapper {
+    position: relative;
+}
+.searchButton {
+    position: absolute;
+    background: url(el_it/head_search.png) no-repeat 0px 0px #fff;
+    border: none;
+    width: 12px;
+    height: 14px;
+    top: 6px;
+    right: 18px;
+    cursor: pointer;
 }
 .header_top__topMenu__items li {
     float: left;
@@ -366,7 +379,7 @@ h2 {
     background: #c6212c;
 }
 .header_mid {
-    padding: 37px 25px 32px;
+    padding: 30px 25px 26px;
     border-top: 1px solid #cb535b;
 }
 .header_mid .col011 {
@@ -420,16 +433,90 @@ h2 {
 }
 .header_bott__mainMenu__items li {
     float: left;
-    overflow: hidden;
+    position: relative;
     font-size: 18px;
     padding: 10px 0;
     margin-right: 23px;
+    z-index: 8888;
 }
 .header_bott__mainMenu__items li:last-child {
     margin-right: 0;
 }
 .header_bott__mainMenu__items a {
     text-decoration: none;
+}
+.innerMeinMenu1:hover .mainMenu__inner1__arrow {
+    display: block;
+}
+.mainMenu__inner1__arrow {
+    position: absolute;
+    display: none;
+    background: url(el_it/mmenu_arr.gif) no-repeat 15px 12px;
+    padding-top: 18px;
+    width: 290px;
+}
+.mainMenu__inner1__wrapper {
+    background: #fff;
+    position: absolute;
+    z-index: 9999;
+    width: 290px;
+    border: 1px solid #f5f5f5;
+}
+.mainMenu__inner1__items li {
+    background: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: 0 !important;
+    padding: 17px 0px 0px 0px!important;
+}
+.mainMenu__inner1__items li a {
+    color: #5facc9 !important;
+    font-family: arial !important;
+}
+.mainMenu__inner1__items li:hover > a {
+    color: #000 !important;
+}
+.innerMeinMenu2 {
+    background: url(el_it/mmenu_select.gif) no-repeat 264px 50% #fff !important;
+}
+.mainMenu__inner1__items .innerMeinMenu2:hover {
+    background: url(el_it/mmenu_select_hover.gif) no-repeat 264px 50% #fff !important;
+}
+.mainMenu__inner1__items .innerMeinMenu2:hover a {
+    padding-right: 15px;
+    width: 235px;
+}
+.mainMenu__inner1__wrapper a,
+.mainMenu__inner2__wrapper a {
+    border-bottom: 1px dotted #7f7f7f;
+    display: block;
+    padding: 0 0 16px;
+    width: 250px;
+    margin: 0 19px;
+}
+.mainMenu__inner1__wrapper li:last-child a,
+.mainMenu__inner2__wrapper li:last-child a {
+    border-bottom: none;
+    padding-bottom: 17px;
+}
+.mainMenu__inner1__items .innerMeinMenu2:hover .mainMenu__inner2__empty {
+    display: block;
+}
+.mainMenu__inner2__empty {
+    display: none;
+    position: absolute;
+    right: -280px;
+    width: 290px;
+    height: 100%;
+    top: -1px;
+    z-index: 9999;
+}
+.mainMenu__inner2__wrapper {
+    background: #fff;
+    width: 288px;
+    border: 1px solid #f5f5f5;
+    position: absolute;
+    margin-left: 15px;
 }
 .header_bott__testButton a {
     border-radius: 5px;
@@ -441,16 +528,20 @@ h2 {
     display: block;
     position: absolute;
     width: 45px;
-    height: 38px;
+    height: 40px;
     top: -8px;
     left: 6px;
 }
 /********** ---------  footer classes  ---------  ***********/
+#footer {
+    margin-top: 60px;
+}
 #footer,
 #footer a {
     color: #fff;
 }
 .footer_hide__menus {
+    display: none;
     background: #383a3b;
     color: #fff;
     padding: 40px 25px 45px;
@@ -461,12 +552,15 @@ h2 {
 }
 .footer_hide__button {
     position: absolute;
-    background: url(el_it/footer_button.png) no-repeat 50% 0%;
+    background: url(el_it/footer_button_up.png) no-repeat 50% 0%;
     width: 114px;
     height: 15px;
     top: -15px;
     left: 50%;
     margin-left: -57px;
+}
+.footer_hide__button.down {
+    background: url(el_it/footer_button.png) no-repeat 50% 0%;
 }
 .footer_hide__menus li {
     list-style-type: disc;
@@ -546,13 +640,13 @@ h2 {
 .footer_redLine_search input[type="search"] {
     height: 26px;
     width: 310px;
+    padding-right: 25px;
     border-radius: 5px;
     -webkit-appearance: none;
     border: none;
     -webkit-box-shadow: inset 0px 1px 1px #c5c5c5;
     -moz-box-shadow: inset 0px 1px 1px #c5c5c5;
     box-shadow: inset 0px 1px 1px #c5c5c5;
-    background: url(el_it/head_search.png) no-repeat 93% 50% #fff;
 }
 .footer_botton {
     background: url(el_it/footer_shadow.png) no-repeat 50% 0% #383a3b;
@@ -576,7 +670,7 @@ h2 {
 .footer_botton__menu__items li {
     float: left;
     overflow: hidden;
-    border-left: 2px solid #fff;
+    border-left: 2px solid #a8a9a9;
     padding-left: 7px;
     margin-left: 7px;
 }
@@ -651,6 +745,9 @@ h2 {
 .content__indexPage__block02__col072_title h3 a {
     outline: none;
     border-bottom: 1px dotted #5facc9;
+}
+/*.content__indexPage__block02__col072_title h3 a:hover {
+    border-bottom: 1px dotted #fff;*/
 }
 .content__indexPage__block02__col072_title h3 a:active {
     outline: none;
@@ -809,7 +906,6 @@ h2 {
 .innerPage__rightMenu li a {
     font-size: 18px;
     color: #6db2b9;
-    text-transform: uppercase;
 }
 .innerPage__rightMenu li a:hover {
     text-decoration: none;
@@ -837,6 +933,14 @@ li .rightMenu__select {
 }
 .innerPage__rightMenu li li .rightMenu__select {
     color: #7e7d6b !important;
+}
+.innerPage__rightBanner__wrapper {
+    margin-top: 50px;
+    width: 230px;
+}
+.innerPage__rightBanner__wrapper a img {
+    border: none;
+    width: 230px;
 }
 /** rightMenu Nav **/
 .content__innerPage__col001 {
@@ -1059,7 +1163,7 @@ td.modelPDF {
     background: url(el_it/plusClose.gif) no-repeat 0% 50%;
     padding: 5px 0 5px 35px;
 }
-.ui-state-active {
+.content__innerPage__vacansTitel.ui-state-active {
     background: url(el_it/plusOpen.gif) no-repeat 0% 50%;
 }
 .content__innerPage__vacansTitel span {
@@ -1241,6 +1345,7 @@ textarea {
     border-radius: 6px;
     padding: 1px 31px;
     margin-top: 10px;
+    cursor: pointer;
 }
 .formStandartAdd__button {
     width: 95%;
@@ -1301,6 +1406,96 @@ textarea {
 }
 .innerPage__firms_name {
     font-weight: bold;
+}
+/*action page*/
+.actionTable__title__year,
+.actionTable__firstTd__title {
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 15 !important;
+    color: #444444;
+}
+.actionTable .dottedBorder {
+    width: 1px !important;
+    height: 100%;
+    padding: 0 !important;
+    margin: 0 !important;
+    font-size: 0px !important;
+    line-height: 0px !important;
+    background: url(el_it/action_dotted.gif) repeat-y;
+}
+.actionTable td {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 80px;
+}
+.actionTable__countTable {
+table-layout: fixed;
+}
+.actionTable__countTable td {
+    border: none;
+    font-size: 10px;
+    color: #444444;
+    text-align: center;
+    vertical-align: middle;
+    height: 27px;
+    padding-top: 3px;
+    width: 20%;
+}
+.actionTable__firstTd__title {
+    text-align: center;
+    vertical-align: middle;
+    height: 30px;
+}
+.activeColumn {
+    background: #f9e8e9;
+    width: 240px !important;
+}
+.actionTable__elemBlock__itemWrapper {
+    position: relative;
+    height: 27px;
+    word-wrap: normal;
+}
+.actionTable__elemBlock__itemTable td {
+    padding-top: 3px;
+}
+.actionTable__elemBlock__wrapper {
+    padding-bottom: 22px;
+}
+.actionTable__elemBlock__item,
+.actionTable__elemBlock__item:hover {
+    display: block;
+    position: absolute;
+    top: 0px;
+    border-radius: 5px;
+    border-top: 1px solid #bdbdbd;
+    -webkit-box-shadow: inset 0px 1px 1px rgba(226,226,227,1);
+    -moz-box-shadow: inset 0px 1px 1px rgba(226,226,227,1);
+    box-shadow: inset 0px 1px 1px rgba(226,226,227,1);
+    background: #f4f4f5;
+    padding: 8px 12px;
+    font-size: 14px;
+    color: #000;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.itemElement1 {
+    width: 216px;
+    left: 0px;
+}
+.itemElement2 {
+    width: 286px;
+    left: 40px;
+}
+.itemElement3 {
+    width: 316px;
+    left: -40px;
+}
+.actionTable__elemBlock__item:hover {
+    border: 1px solid #c6212c;
+    padding: 8px 11px 7px;
+    text-decoration: none;
 }
 /*nav page*/
 .content__innerPage__pageNave {
