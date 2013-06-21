@@ -8,7 +8,12 @@ $(function() {
         frame_gap: 10,
         show_captions: false,
         show_infobar: false,
-        show_filmstrip_nav: false
+        show_filmstrip_nav: false,
+        autoplay: true,
+        transition_interval: 3400,
+        panel_animation: 'slide',
+        enable_overlays: true,
+        overlay_position: 'top'
     });
 });
 /* sliders */
@@ -53,9 +58,11 @@ $(function(){
     $('.tooltips__popup').css('display','none');
     $('.tooltips').mouseover(function(){
         $(this).find('.tooltips__popup').css('display','block');
+        $('.content__indexPage__block03_learn').css('z-index', '10');
     });
     $('.tooltips').mouseout(function(){
         $(this).find('.tooltips__popup').css('display','none');
+        $('.content__indexPage__block03_learn').css('z-index', '101');
     })
     $('.tooltips .close').click(function(){
         $('.tooltips__popup').css('display','none');

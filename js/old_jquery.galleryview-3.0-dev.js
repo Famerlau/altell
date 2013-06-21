@@ -354,10 +354,12 @@ if (typeof Object.create !== 'function') {
 					break;
 			}
 			
-			if(this.opts.overlay_position === 'top') {				
-				dom.gv_showOverlay.css({ top: 0, left: 0 }).hide();
-			} else {				
-				dom.gv_showOverlay.css({ bottom: 0, left: 0 }).hide();
+			if(this.opts.overlay_position === 'top') {
+				dom.gv_overlay.css({ top: 0, left: -99999 });
+				dom.gv_showOverlay.css({ top: 0, left: 0 });
+			} else {
+				dom.gv_overlay.css({ bottom: 0, left: -99999 });
+				dom.gv_showOverlay.css({ bottom: 0, left: 0 });
 			}
 			
 			if(!this.opts.show_filmstrip_nav) {
@@ -633,6 +635,7 @@ if (typeof Object.create !== 'function') {
 				});
 			} else {
 				dom.gv_overlay.html('<h4>'+self.gvImages[i].attrs.title+'</h4><p>'+self.gvImages[i].attrs.description+'</p>');
+				dom.gv_overlay.css(this.opts.overlay_position,-1 * dom.gv_overlay.outerHeight());
 			}
 			
 		},
@@ -815,7 +818,7 @@ if (typeof Object.create !== 'function') {
 						
 						if(new_top < (-1 * (gv.outerHeight(image) - gv.innerHeight(dom.gv_panel)))) { new_top = -1 * (gv.outerHeight(image) - gv.innerHeight(dom.gv_panel)); }
 						if(new_left < (-1 * (gv.outerWidth(image) - gv.innerWidth(dom.gv_panel)))) { new_left = -1 * (gv.outerWidth(image) - gv.innerWidth(dom.gv_panel)); }
-
+						
 						image.css('top',new_top);
 						image.css('left',new_left);
 					} else {
