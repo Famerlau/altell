@@ -92,7 +92,7 @@
 .gv_frame img { border: none; position: absolute; }
 
 /* FRAME CAPTION */
-.gv_frame .gv_caption { height: 14px; line-height: 14px; font-size: 10px; text-align: center; color:white; }
+.gv_frame .gv_caption { visibility: hidden; height: 14px; line-height: 14px; font-size: 10px; text-align: center; color: white; background: grey; font-size: 12px; position: absolute; bottom: 14px; width: 106px; padding: 5px 10px; }
 
 /* CURRENT FRAME CAPTION */
 .gv_frame.current .gv_caption { }

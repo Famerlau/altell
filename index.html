@@ -12,6 +12,7 @@
 	<script type="text/javascript" src="js/jquery.galleryview-3.0-dev.js"></script>
 	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
 	<script type="text/javascript" src="js/jquery.timers-1.2.js"></script>
+	<script type="text/javascript" src="js/jquery.placeholder.min.js"></script>
 	<script type="text/javascript" src="js/sc.js"></script>
 </head>
 <body>
@@ -29,7 +30,9 @@
 					</ul>
 				</div>
 				<div class="header_top__search col002 column">
-					<p><input type="search"></p>
+					<div class="searchWrapper">
+					<p><input type="search"><input type="submit" class="searchButton" value=""></p>
+					</div>
 				</div>
 				<div class="header_top__topMenu col003 column">
 					<ul class="header_top__topMenu__items">
@@ -58,7 +61,42 @@
 					<a href="/" class="greenButton"><i></i>Партнерский раздел</a>
 				</div>
 				<div class="header_mid__callButton col013 column">
-					<a href="/" class="dottedButton">Позвоните мне</a>
+					<div class="hideFormWrapper">
+					    <a href="" class="dottedButton callBack">Позвоните мне</a>
+					    <div class="hideForm arrowUp">
+					    	<form action=""  onsubmit="$('[placeholder]').placeholder('clear');">
+					    		<table width="100%" cellpadding="0" cellspacing="0" border="none">
+					    			<tr>
+					    				<td class="hideFormEmpty" colspan="2"></td>
+					    			</tr>
+							        <tr>
+								        <td colspan="2">
+								        	<input type="text" placeholder="Как вас зовут">
+								        </td>
+							        </tr>
+							        <tr>
+							        	<td colspan="2">
+							        		<input type="text" placeholder="Ваш телефон">
+							        	</td>
+							        </tr>
+							        <tr>
+							        	<td colspan="2">
+							        		<input type="text" placeholder="Город">
+							        	</td>
+							        </tr>
+							        <tr>
+							        	<td>
+							        		<input type="text" placeholder="Время звонка" class="inputWithButton">
+							        		<input type="submit" class="greenButton" value="OK">
+							        	</td>
+							        </tr>
+							        <tr>
+					    				<td class="hideFormEmpty" colspan="2"></td>
+					    			</tr>
+						        </table>
+					    	</form>
+					    </div>
+				    </div>
 				</div>
 				<div class="header_mid__phones col014 column">
 					<div class="header_mid__phones block001">
@@ -95,14 +133,14 @@
 			<div class="content__indexPage__wrapper">
 				<div class="content__indexPage__block01_gall">
 					<ul id="MainGallery">
-                        <li><img src="http://media.blizzard.com/sc2/media/fanart/fanart-0210-large.jpg" data-frame="http://fc01.deviantart.net/fs48/f/2009/203/1/0/Chandra_Nalaar_by_SteveArgyle.jpg"></li>
-                        <li><img src="http://media.blizzard.com/sc2/media/fanart/fanart-0209-large.jpg" data-description="Some more information about the photo <a href='google.com'>Подробнее</a>" title="Test"></li>
-                        <li><img src="http://media.blizzard.com/sc2/media/fanart/fanart-0208-large.jpg"></li>
-                        <li><img src="http://media.blizzard.com/sc2/media/fanart/fanart-0188-large.jpg"></li>
-                        <li><img src="http://media.blizzard.com/sc2/media/fanart/fanart-0181-large.jpg"></li>
+                        <li><img src="http://media.blizzard.com/sc2/media/fanart/fanart-0210-large.jpg" title="test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1" href="http://google.com" data-frame="http://fc01.deviantart.net/fs48/f/2009/203/1/0/Chandra_Nalaar_by_SteveArgyle.jpg"></li>
+                        <li><img src="http://media.blizzard.com/sc2/media/fanart/fanart-0209-large.jpg" title="test2 test2 test2 test2 test2 test2" href="http://yandex.ru" data-frame="http://fc01.deviantart.net/fs48/f/2009/203/1/0/Chandra_Nalaar_by_SteveArgyle.jpg"></li>
+                        <li><img src="http://media.blizzard.com/sc2/media/fanart/fanart-0208-large.jpg" title="test3" href="http://rambler.ru"></li>
+                        <li><img src="http://media.blizzard.com/sc2/media/fanart/fanart-0188-large.jpg" title="test4" href="http://mail.ru"></li>
+                        <li><img src="http://media.blizzard.com/sc2/media/fanart/fanart-0181-large.jpg" title="test5" href="http://aport.ru"></li>
                     </ul>
 				</div>
-				<div class="content__indexPage__block02 over">
+				<div class="content__indexPage__block02">
 					<div class="content__indexPage__block02__items col071 column">
 						<h3 class="content__indexPage__block02__title">О нас</h3>
 						<p>ALTELL — одна из ведущих российских компаний, работающих в области информационной безопасности. Нашей специализацией является выполнение сложных разработок в области аппаратного и программного обеспечения, в том числе продуктов специального назначения. Качество продукции подтверждается международной системой менеджмента качества и контролируется военным представительством в соответствии с ГОСТ РВ 15.307-2002. Деятельность компании лицензирована ФСТЭК и ФСБ РФ.</p>
@@ -122,13 +160,27 @@
 						</ul>
 					</div>
 					<div class="content__indexPage__block02__items col072 column">
-						<div class="content__indexPage__block02__col072" id="tabs001">
+						<div class="content__indexPage__block02__col072">
 							<ul class="content__indexPage__block02__col072">
 								<li class="content__indexPage__block02__col072_title">
-									<h3><a href="#tabs001-01" class="dottedButton">Новости</a><i class="news_rss"></i></h3>
+									<h3><a href="#" class="dottedButton">Новости</a><i class="news_rss"></i></h3>
 								</li>
 								<li class="content__indexPage__block02__col072_title">
-									<h3><a href="#tabs001-02" class="dottedButton">Подписаться</a></h3>
+									<div class="hideFormWrapper">
+					                    <h3><a href="#" class="dottedButton">Подписаться</a></h3>
+					                    <div class="hideForm arrowDown">
+					    	                <form action=""  onsubmit="$('[placeholder]').placeholder('clear');">
+					    		                <table width="100%" cellpadding="0" cellspacing="0" border="none">
+					    		                	<tr>
+							                        	<td>
+							                        		<input type="text" placeholder="Ваш e-mail" class="inputWithButton">
+							                        		<input type="submit" class="greenButton" value="OK">
+							                        	</td>
+							                        </tr>
+						                        </table>
+					    	                </form>
+					                    </div>
+				                    </div>
 								</li>
 								<div class="clear"></div>
 								<div id="tabs001-01" class="content__indexPage__block02__col072_item01">
@@ -175,11 +227,11 @@
 										</div>
 									</div>
 								</div>
-								<div id="tabs001-02" class="content__indexPage__block02__col072_item02">
+								<!--<div id="tabs001-02" class="content__indexPage__block02__col072_item02">
 									<p><input type="text" value="Введите ваш адрес электронной почты"  onfocus="this.value=''"></p>
 									<p>Опциональный текстоый блок. Инфа про то, что контактная информация не передаётся третьим лицам, компания «АльтЭль» не занимается рассылкой спама и т.д.</p>
 									<input type="submit" value="Подписаться" class="greenButton">
-								</div>
+								</div>-->
 							</ul>
 						</div>
 					</div>
@@ -209,6 +261,7 @@
 						</div>
 					</div>
 				</div>
+				<div class="clear"></div>
 				<hr>
 				<div class="content__indexPage__block03">
 					<h3 class="content__indexPage__block03__title">Наши решения используют</h3>
@@ -245,7 +298,7 @@
 								<div class="tooltips__popup">
 									<div class="tooltips__wrapper">
 										<div class="tootips__inner">
-									        <p class="tooltips__name">Название компании</p>
+									        <p class="tooltips__name">Название компании Название компании Название компании</p>
 									        <p class="tooltips__link"><a href="">История успеха</a></p>
 									        <i class="close"></i>
 									    </div>
@@ -420,7 +473,9 @@
 						</ul>
 					</div>
 					<div class="footer_redLine_search col052 column">
-						<p><input type="search"></p>
+						<div class="searchWrapper">
+						    <p><input type="search"><input type="submit" class="searchButton" value=""></p>
+					    </div>
 					</div>
 					<div class="clear"></div>
 				</div>

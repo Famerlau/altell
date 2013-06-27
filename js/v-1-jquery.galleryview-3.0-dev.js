@@ -18,7 +18,6 @@ if (typeof Object.create !== 'function') {
 }
 
 (function ($) {
-	var slide_counter = 0;
 	// custom image object
 	var gvImage = function (img) {
 
@@ -36,7 +35,7 @@ if (typeof Object.create !== 'function') {
 			title: img.attr('title') || img.attr('alt'),
 			description: img.data('description')
 		};
-		this.href = img.attr('href');
+		this.href = null;
 		this.dom_obj = null;
 		
 		return this;
@@ -355,12 +354,10 @@ if (typeof Object.create !== 'function') {
 					break;
 			}
 			
-			if(this.opts.overlay_position === 'top') {
-				dom.gv_overlay.css({ top: 0, left: -99999 });
-				dom.gv_showOverlay.css({ top: 0, left: 0 });
-			} else {
-				dom.gv_overlay.css({ bottom: 0, left: -99999 });
-				dom.gv_showOverlay.css({ bottom: 0, left: 0 });
+			if(this.opts.overlay_position === 'top') {				
+				dom.gv_showOverlay.css({ top: 0, left: 0 }).hide();
+			} else {				
+				dom.gv_showOverlay.css({ bottom: 0, left: 0 }).hide();
 			}
 			
 			if(!this.opts.show_filmstrip_nav) {
@@ -475,7 +472,7 @@ if (typeof Object.create !== 'function') {
 						heightFactor = gv.innerHeight(parent) / height,
 						parentType = parent.hasClass('gv_panel') ? 'panel' : 'frame',
 						heightOffset = 0, widthOffset = 0;
-				
+					
 					gvImage.scale[parentType] = self.opts[parentType+'_scale'] === 'fit' ? Math.min(widthFactor,heightFactor) : Math.max(widthFactor,heightFactor);
 					
 					widthOffset = Math.round((gv.innerWidth(parent) - (width * gvImage.scale[parentType])) / 2);
@@ -487,45 +484,15 @@ if (typeof Object.create !== 'function') {
 						top: heightOffset,
 						left: widthOffset
 					});
-					_img.attr('class', 'big');
 					_img.hide().css('visibility','visible');
 					_img.remove().appendTo(parent);
-
+					
 					if(parentType === 'frame') {
 						_img.fadeIn();
-						//_img.attr('href', gvImage.href);
-						//_img.attr('class', 'small');
-						/*_img.attr({
-							//alt: gvImage.attrs.title,
-							//title: gvImage.attrs.title
-						});*/
-						var img_caption = parent.parent().find('.gv_caption');
-						
-						img_caption.mouseenter(function() {
-							img_caption.css("visibility", "visible");
-							});
-						img_caption.mouseleave(function() {
-							img_caption.css("visibility", "hidden");
-							});
-						_img.mouseenter(function() {
-							//img_caption.show();
-							img_caption.css("visibility", "visible");
-							});
-						_img.mouseleave(function() {
-							//img_caption.hide();
-							img_caption.css("visibility", "hidden");
-							});
-						
 						parent.parent().removeClass('gv_frame-loading');
 						parent.parent().find('.gv_caption').html(gvImage.attrs.title);
 					} else if(index === self.opts.start_frame - 1) {
 						parent.prependTo(dom.gv_panelWrap);
-						
-						if(slide_counter == 0)
-						{
-							$('.gv_panelWrap').attr('href',gvImage.href);
-							slide_counter++;
-						}
 						parent.removeClass('gv_panel-loading');
 						_img.fadeIn();
 						self.showInfoBar();
@@ -533,18 +500,6 @@ if (typeof Object.create !== 'function') {
 						parent.removeClass('gv_panel-loading');
 						_img.show();
 					}
-					
-					if(parentType === 'panel') {
-						_img.attr('href', gvImage.href);
-						if (gvImage.href) {
-							//_img.click(function() {
-								//document.location.href = _img.attr('href');
-							//});
-							_img.css('cursor', 'pointer');
-						}
-					}
-					
-
 				});
 				
 				// store eventual image container as data property
@@ -664,7 +619,7 @@ if (typeof Object.create !== 'function') {
 			this.updateFilmstrip(frame_i);
 			this.showInfoBar();
 			
-
+			
 		},
 		
 		updateOverlay: function(i) {
@@ -678,7 +633,6 @@ if (typeof Object.create !== 'function') {
 				});
 			} else {
 				dom.gv_overlay.html('<h4>'+self.gvImages[i].attrs.title+'</h4><p>'+self.gvImages[i].attrs.description+'</p>');
-				dom.gv_overlay.css(this.opts.overlay_position,-1 * dom.gv_overlay.outerHeight());
 			}
 			
 		},
@@ -816,11 +770,6 @@ if (typeof Object.create !== 'function') {
 			}
 			this.playing = true;
 			dom.gv_galleryWrap.everyTime(this.opts.transition_interval,'slideshow_'+this.id,function(){ self.showNext(); });
-
-			if ($('.big').attr('href'))
-			{
-				$('.gv_panelWrap').attr('href',$('.big').attr('href'));
-			}
 		},
 		
 		stopSlideshow: function(changeIcon) {
@@ -866,7 +815,7 @@ if (typeof Object.create !== 'function') {
 						
 						if(new_top < (-1 * (gv.outerHeight(image) - gv.innerHeight(dom.gv_panel)))) { new_top = -1 * (gv.outerHeight(image) - gv.innerHeight(dom.gv_panel)); }
 						if(new_left < (-1 * (gv.outerWidth(image) - gv.innerWidth(dom.gv_panel)))) { new_left = -1 * (gv.outerWidth(image) - gv.innerWidth(dom.gv_panel)); }
-						
+
 						image.css('top',new_top);
 						image.css('left',new_left);
 					} else {
@@ -1064,7 +1013,6 @@ if (typeof Object.create !== 'function') {
 			
 			this.updateOverlay(this.iterator);
 			this.updateFilmstrip(this.frameIterator);
-			
 		}
 		
 	}; // END GalleryView
