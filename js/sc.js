@@ -141,5 +141,6 @@ $(function() {
 });
 /* select */
 $(function(){
+    $('form select').addClass('styled');
     $('.styled').customSelect();
 });
